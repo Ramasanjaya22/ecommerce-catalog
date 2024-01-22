@@ -1,22 +1,69 @@
 <template>
-  <div>
+  <div class="product-page">
     <SkeletonProductCard v-if="isLoading" />
-    <div v-else>
-      <div v-if="isProductAvailable">
+    <div 
+    v-else
+    class="container-page"
+    :class="
+        !isProductAvailable ? 'bg-page-gray' : this.isMen ? 'bg-page-blue' : 'bg-page-magenta'
+      "
+    >
+    <div class="bg-pattern">
+      <img src="/bg-pattern.svg" alt="pattern background" />
+    </div>
+   <div class="product-card">
+    <div
+    v-if="isProductAvailable"
+    class="product-unavailable-container">
+    <div v-if="!isProductAvailable" class="product-unavailable-container">
+      <div class="bg-unavailable">
+        <img src="/sad-face.png" alt="background-sad-face" />
+      </div>
+      <div class="detail-product">
+        <p>This product is unavailable to show</p>
+        <div class="buttons">
+          <button @click="getNextProduct" class="button-next">Next Product</button>
+        </div>
+      </div>
+    </div>
+    <div v-else class="product-available-container">
+      <div class="product-image">
         <img :src="product.image" :alt="product.title" />
-        <h2>{{ product.title }}</h2>
-        <p>Category: {{ product.category }}</p>
-        <p>Description: {{ product.description }}</p>
-        <p>Rating: {{ product.rating.rate }}</p>
-        <p>Price: {{ product.price }}</p>
-        <button @click="buyProduct">Buy</button>
       </div>
-      <div v-else>
-        <p>No clothing products available.</p>
+      <div class="product-content">
+        <div class="product-title">
+          <p>{{ product.title }}</p>
+        </div>
+        <div class="product-label">
+          <p>{{ product.category }}</p>
+            <p>{{ product.rating.rate }}/5</p>
+          </div>
+        <hr />
+        <div class="product-description">
+          <p>{{ product.description }}</p>
+        </div>
+        <div class="product-checkout">
+          <hr />
+          <div class="product-price">
+            <p>${{ product.price }}</p>
+          </div>
+          <div class="product-button">
+            <button class="btn-buy">Buy Now</button>
+            <button
+              class="btn-next"
+              :class="isMen"
+              @click="getNextProduct"
+            >
+              Next Product
+            </button>
+          </div>
+        </div>
       </div>
-      <button @click="getNextProduct">Next Product</button>
     </div>
   </div>
+</div>
+</div>
+</div>
 </template>
 
 <script>
