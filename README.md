@@ -1,5 +1,5 @@
 # ecommerce
-
+[![Netlify Status](https://api.netlify.com/api/v1/badges/dc62b41c-239a-495f-a969-7aca1bd54a72/deploy-status)](https://app.netlify.com/sites/ecommercecatalog/deploys)
 This template should help get you started developing with Vue 3 in Vite.
 
 ## Recommended IDE Setup
