@@ -15,7 +15,6 @@
     <div
     v-if="!isProductAvailable"
     class="product-unavailable-container">
-    <div v-if="!isProductAvailable" class="product-unavailable-container">
       <div class="bg-unavailable">
         <img src="/sad-face.png" alt="background-sad-face" />
       </div>
@@ -61,7 +60,6 @@
       </div>
     </div>
   </div>
-</div>
 </div>
 </div>
 </template>
