@@ -150,3 +150,41 @@
 .product-unavailable-container .detail-product button:hover {
   background: var(--soft-gray);
 }
+/* Dynamic Button Class */
+.btn-mens {
+  background-color: var(--blue);
+  border: 2px solid var(--blue);
+}
+
+.btn-mens-border {
+  border: 2px solid var(--blue);
+  color: var(--blue);
+}
+
+.btn-womens {
+  background-color: var(--magenta);
+  border: 2px solid var(--magenta);
+}
+
+.btn-womens-border {
+  border: 2px solid var(--magenta);
+  color: var(--magenta);
+}
+.product-checkout .product-button button {
+  font-size: 16px;
+  font-weight: 600;
+  padding: 6px 70px;
+  cursor: pointer;
+}
+.product-button .btn-buy {
+  color: var(--white);
+  margin-right: 10px;
+}
+
+.product-button .btn-next {
+  background-color: var(--white);
+}
+hr {
+  border: 1px solid var(--soft-gray);
+  margin-bottom: 10px;
+}

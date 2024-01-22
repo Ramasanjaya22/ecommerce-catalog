@@ -21,7 +21,11 @@
       <div class="detail-product">
         <p>This product is unavailable to show</p>
         <div class="buttons">
-          <button @click="getNextProduct" class="button-next">Next Product</button>
+          <button 
+          @click="getNextProduct" 
+          class="button-next"
+          :class="isMen ? 'btn-mens-border' : 'btn-womens-border'"
+          >Next Product</button>
         </div>
       </div>
     </div>
@@ -47,10 +51,13 @@
             <p>${{ product.price }}</p>
           </div>
           <div class="product-button">
-            <button class="btn-buy">Buy Now</button>
+            <button 
+            class="btn-buy"
+            :class="isMen ? 'btn-mens' : 'btn-womens'"
+            >Buy Now</button>
             <button
               class="btn-next"
-              :class="isMen"
+              :class="isMen ? 'btn-mens-border' : 'btn-womens-border'"
               @click="getNextProduct"
             >
               Next Product
