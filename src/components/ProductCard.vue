@@ -1,7 +1,6 @@
 <template>
   <div>
-    <h1>Let fetch api!</h1>
-    <div v-if="isLoading">Loading...</div>
+    <SkeletonProductCard v-if="isLoading" />
     <div v-else>
       <div v-if="isProductAvailable">
         <img :src="product.image" :alt="product.title" />
@@ -22,9 +21,12 @@
 
 <script>
 import axios from 'axios'
-
+import SkeletonProductCard from './SkeletonProductCard.vue'
 export default {
   name: 'ProductCard',
+  components: {
+    SkeletonProductCard
+  },
   data() {
     return {
       products: {},
@@ -33,7 +35,6 @@ export default {
       isProductAvailable: false,
       isWomen: false,
       isMen: false,
-      product: {}
     }
   },
   methods: {
