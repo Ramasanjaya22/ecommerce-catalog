@@ -78,13 +78,6 @@
   margin-bottom: 0.875em; 
   overflow-y: visible;
 }
-
-.text-mens{
-  color: var(--blue);
-}
-.text-womens {
-  color: var(--magenta);
-}
 .product-content .product-label {
   display: flex;
   justify-content: space-between;
@@ -176,6 +169,39 @@
   align-items: center;
   font-size: 1rem;
   margin-bottom: 15px;
+}
+/* dot colour */
+.dot-blue-men {
+  background-color: var(--blue);
+  border: 1px solid var(--blue);
+}
+.dot-white-men {
+  background-color: var(--white);
+  border: 1px solid var(--blue);
+}
+
+.dot-magenta-women {
+  background-color: var(--magenta);
+  border: 1px solid var(--magenta);
+}
+.dot-white-women {
+  background-color: var(--white);
+  border: 1px solid var(--magenta);
+}
+.product-rate .circles-rate {
+  display: flex;
+  margin-left: 0.5rem;
+}
+.product-rate .circle {
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-radius: 100%;
+  margin-right: 3px;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
 }
 .product-description {
   max-height: 200px;

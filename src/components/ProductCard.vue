@@ -24,7 +24,6 @@
           <button 
           @click="getNextProduct" 
           class="button-next"
-          :class="isMen ? 'btn-mens-border' : 'btn-womens-border'"
           >Next Product</button>
         </div>
       </div>
@@ -39,8 +38,74 @@
         </div>
         <div class="product-label">
           <p>{{ product.category }}</p>
+          <div class="product-rate">
             <p>{{ product.rating.rate }}/5</p>
+            <div>
+              <div class="circles-rate">
+                <span
+                  class="circle"
+                  :class="
+                    product.rating.rate < 0.5
+                      ? isMen
+                        ? 'dot-white-men'
+                        : 'dot-white-women'
+                      : isMen
+                        ? 'dot-blue-men'
+                        : 'dot-magenta-women'
+                  "
+                ></span>
+                <span
+                  class="circle"
+                  :class="
+                    product.rating.rate < 1.5
+                      ? isMen
+                        ? 'dot-white-men'
+                        : 'dot-white-women'
+                      : isMen
+                        ? 'dot-blue-men'
+                        : 'dot-magenta-women'
+                  "
+                ></span>
+                <span
+                  class="circle"
+                  :class="
+                    product.rating.rate < 2.5
+                      ? isMen
+                        ? 'dot-white-men'
+                        : 'dot-white-women'
+                      : isMen
+                        ? 'dot-blue-men'
+                        : 'dot-magenta-women'
+                  "
+                ></span>
+                <span
+                  class="circle"
+                  :class="
+                    product.rating.rate < 3.5
+                      ? isMen
+                        ? 'dot-white-men'
+                        : 'dot-white-women'
+                      : isMen
+                        ? 'dot-blue-men'
+                        : 'dot-magenta-women'
+                  "
+                ></span>
+                <span
+                  class="circle"
+                  :class="
+                    product.rating.rate < 4.5
+                      ? isMen
+                        ? 'dot-white-men'
+                        : 'dot-white-women'
+                      : isMen
+                        ? 'dot-blue-men'
+                        : 'dot-magenta-women'
+                  "
+                ></span>
+              </div>
+            </div>
           </div>
+        </div>
         <hr />
         <div class="product-description">
           <p>{{ product.description }}</p>
@@ -113,9 +178,6 @@ export default {
         // Reset loading state
         this.isLoading = false;
       }
-    },
-    buyProduct() {
-      // Add logic for buying the product
     },
     getNextProduct() {
       // Add logic for getting the next product
