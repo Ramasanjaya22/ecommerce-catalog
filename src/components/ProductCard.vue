@@ -13,7 +13,7 @@
     </div>
    <div class="product-card">
     <div
-    v-if="isProductAvailable"
+    v-if="!isProductAvailable"
     class="product-unavailable-container">
     <div v-if="!isProductAvailable" class="product-unavailable-container">
       <div class="bg-unavailable">
