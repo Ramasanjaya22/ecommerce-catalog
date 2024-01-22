@@ -33,8 +33,8 @@
       <div class="product-image">
         <img :src="product.image" :alt="product.title" />
       </div>
-      <div class="product-content">
-        <div class="product-title">
+      <div class="product-content" :class="isMen ? 'scrollbar-mens' : 'scrollbar-womens'">
+        <div class="product-title" :class="isMen ? 'text-mens' : 'text-womens'">
           <p>{{ product.title }}</p>
         </div>
         <div class="product-label">
@@ -47,7 +47,7 @@
         </div>
         <div class="product-checkout">
           <hr />
-          <div class="product-price">
+          <div class="product-price" :class="isMen ? 'text-mens' : 'text-womens'">
             <p>${{ product.price }}</p>
           </div>
           <div class="product-button">

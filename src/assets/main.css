@@ -150,6 +150,51 @@
 .product-unavailable-container .detail-product button:hover {
   background: var(--soft-gray);
 }
+.product-content .product-title {
+  max-height: 7.5em;
+  font-size: 2em; 
+  font-weight: 600;
+  margin-bottom: 0.875em; 
+  overflow-y: visible;
+}
+
+.text-mens{
+  color: var(--blue);
+}
+.text-womens {
+  color: var(--magenta);
+}
+.product-content .product-label {
+  display: flex;
+  justify-content: space-between;
+}
+.product-label p {
+  color: var(--gray);
+}
+.product-label .product-rate {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+.product-description {
+  max-height: 200px;
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  overflow-y: scroll;
+}
+.product-checkout {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+}
+.product-checkout .product-price {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
 /* Dynamic Button Class */
 .btn-mens {
   background-color: var(--blue);
